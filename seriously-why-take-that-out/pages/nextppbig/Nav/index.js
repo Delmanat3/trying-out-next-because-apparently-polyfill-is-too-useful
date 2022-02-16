@@ -13,15 +13,12 @@ import MoneyIcon from "@mui/icons-material/Money";
 import { getUser } from "../../api/backendless";
 
 export default function Nav() {
-  if (typeof window !== "undefined") {
-    const [isDesktop, setDesktop] = React.useState(window.innerWidth > 1000);
-    const updateMedia = () => {
-      setDesktop(window.innerWidth > 1000);
-    };
-  }
-  
+ 
+
+
   const [geed, setGeed] = React.useState(true);
   React.useEffect(() => {
+ 
     let myPromise = new Promise(function (myResolve, myReject) {
       const b = getUser();
 
@@ -38,12 +35,11 @@ export default function Nav() {
       }
     );
 
-    window.addEventListener("resize", updateMedia);
-    return () => window.removeEventListener("resize", updateMedia);
-  });
+
+  },[]);
   return (
     <>
-      {(isDesktop && geed) || (!isDesktop && geed) ? (
+      {(geed)  ? (
         <>
           <Box sx={{ flexGrow: 1 }}>
             <AppBar
@@ -61,7 +57,7 @@ export default function Nav() {
                   Welcome back, {geed.firstName}!
                 </Typography>
 
-                <Link to="/table" underline="none"><MoneyIcon /></Link>
+                {/* <Link to="/table" underline="none"><MoneyIcon /></Link> */}
                   {/* <IconButton
                     size="large"
                     edge="start"
@@ -80,8 +76,8 @@ export default function Nav() {
             <Jumbo />
           </>
         </>
-      ) : (
-        <>
+      ):(
+         <>
           <Box sx={{ flexGrow: 1 }}>
             <AppBar
               color="transparent"
@@ -95,7 +91,7 @@ export default function Nav() {
                   sx={{ width: 56, height: 56 }}
                 />
 
-                <Link to="/login" underline="none">
+                {/* <Link href="/login" underline="none"> Login <PatternIcon /></Link> */}
                   <IconButton
                     size="large"
                     edge="start"
@@ -103,10 +99,11 @@ export default function Nav() {
                     aria-label="menu"
                     sx={{ mr: 2, fontSize: "14px" }}
                   >
-                    Login <PatternIcon />
+                    
                   </IconButton>
-                </Link>
-                <Link to="/Signup" underline="none">
+                
+                {/* <Link href="/Signup" underline="none">  Sign Up <PersonAddAltSharpIcon /> </Link> */}
+
                   <IconButton
                     size="large"
                     edge="start"
@@ -114,20 +111,11 @@ export default function Nav() {
                     aria-label="menu"
                     sx={{ mr: 2, fontSize: "14px" }}
                   >
-                    Sign Up <PersonAddAltSharpIcon />
+                  
                   </IconButton>
-                </Link>
-                <Link to="/table" underline="none">
-                  <IconButton
-                    size="large"
-                    edge="start"
-                    color="primary"
-                    aria-label="menu"
-                    sx={{ mr: 2, fontSize: "14px" }}
-                  >
-                    <MoneyIcon />
-                  </IconButton>
-                </Link>
+                {/* <Link href="/table" underline="none">     <MoneyIcon />                </Link> */}
+
+
               </Toolbar>
             </AppBar>
             <Marque />

@@ -2,6 +2,8 @@ import * as React from 'react';
 import {Button, Stack,TextField} from '@mui/material';
 import {SimpleSearch} from "../../api/coinGecko"
 import {Me}from "../../api/backendless"
+import styles from '../../../styles/Home.module.css'
+
 export  function Search(props) {
   const [formState, setFormState] = React.useState("");
 
@@ -46,7 +48,7 @@ try{
 
   return (
     <Stack
-    id="search"
+    id={styles.search}
       component="form"
       sx={{
         width: '40ch',

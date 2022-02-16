@@ -1,116 +1,260 @@
-.container {
-  padding: 0 2rem;
-}
-
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
-  text-align: center;
-}
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-}
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+#shopItems{
+  height:275px;
+  box-shadow: 0 4px 8px 0 rgba(224, 223, 223, 0.2);
+  background-color: rgb(16,8,4);
+  color: white;
+  padding: 2rem;
+  border-radius: 9px; 
   }
-}
+  #shopItems:hover {
+    box-shadow: 0px 8px 16px 0px rgb(252, 248, 248);
+    transition: 0.5s;
+  }
+  /* li{
+  padding: 5px;
+  font-size: larger;
+  } */
+  @media screen and (min-width: 992px) {
+    #Bg1,#Bg2,#Bg3 {
+      background-attachment: fixed;
+  
+    }
+  }
+  #Bg1,#Bg2,#Bg3 {
+    min-height: 400px;
+    position: relative;
+    /* opacity: 0.65; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #Bg1{
+    height:700px;
+    /* //background-color: #282c34; */
+  }
+  #Bg3{
+   
+    min-height: "300px";
+    /* background-attachment: "fixed";
+    backgroundosition: "center";
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover", */
+    opacity: "0.65",
+  }
+  #marq:hover{
+    box-shadow: 0px 8px 16px 0px rgb(252, 248, 248);
+    transition: 0.5s;
+  }
+  #search{
+    position: relative;
+    top: 500px;
+  }
+   #mainBox{
+     min-height:100vh;
+     color:white; 
+     line-height: 2;
+   }
+  #marqe{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+  }
+  #coinName{
+    font-size: larger;
+   
+  }
+  #coinName,#coinPrice,#priceChange24{
+    padding: 5px;
+    color: white;
+  }
+  #innerbox{
+    background-color: black;
+    opacity: .69;
+  }
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  
+  /* default stylings */
+  /* * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  } */
+  
+  /* provides background color to body */
+  /* body {
+    background-color:"black";
+    opacity:.69;
+  } */
+  
+  #mediaMe{
+    color:white;
+     height: 900; 
+     width: 55vw;
+  
+  }
+  @media only screen and (max-width: 800px) {
+    #mediaMe {
+      width:100vw;
+    }
+  }
+  
+  /* ----- container stylings:
+  -> centers the whole content of the page
+  -> defines width and height for container ----- */
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 800px;
+    height: 300px;
+  }
+  /* ----- end of container stylings ----- */
+  
+  /* provides padding to main heading */
+  .main-heading {
+    padding: 2rem 0 2rem 0;
+  }
+  
+  .content {
+    position: relative;
+  }
+  
+  /* ----- carousel content stylings ----- */
+  /* places the carousel content on center of the carousel */
+  .carousel-content {
+    position: absolute;
+    /*to center the content horizontally and vertically*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 50;
+  }
+  .carousel-heading {
+    font-size: 3rem;
+    color: #308d46;
+    margin-bottom: 1rem;
+  }
+  /*----- end of carousel content stylings ----- */
+  
+  /* ----- slideshow stylings ----- */
+  .slideshow {
+    height: 100%;
+    overflow: hidden; /* to hide slides in x-direction */
+    position: relative;
+  }
+  /* wrapper which wraps all the slideshow images stylings */
+  .slideshowWrapper {
+    display: flex;
+    /* We give it width as 400% because we are making a
+    4 image carousel. If you want to make for example,
+    5 images carousel, then give width as 500%. */
+    width: 1000%;
+    height: 100%;
+    position: relative;
+    /* you can change the animation settings from below */
+    animation: slideshow 120s infinite;
+  }
+  /* define width and height for images*/
+  .slide {
+    width: 100%;
+    height: 100%;
+  }
+  .slide-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  /* @keyframes are used to provide animations
+  We make these settings for 4 image carousel.
+  Make modification accourding to your needs. */
+  @keyframes slideshow {
+    0% { left: 0; }
+    5% { left: 0; }
+    10% { left: -100%; }
+    15% { left: -100%; }
+    25% { left: -200%; }
+    30% { left: -200%; }
+    35% { left: -300%; }
+    40% { left: -300%; }
+    45% { left: -400%; }
+    55% { left: -400%; }
+    60% { left: -500%; }
+    70% { left: -500%; }
+    75% { left: -600%; }
+    85% { left: -600%; }
+    90% { left: -700%; }
+    95% { left: -800%; }
+    100% { left: 0%; }
+  
+  }
+  /* ----- end of slideshow stylings ----- */
+  
+  /* ----- carousel control buttons stylings ----- */
+  .slide-btn {
+   background-color: #bbb;
+    border-radius: 50%;
+    border: .2rem solid #d38800;
+    width: 1.2rem;
+    height: 1.2rem;
+    outline: none;
+    cursor: pointer;
+    /* stylings for positioning the buttons at
+    the bottom of the carousel */
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 70;
+  }
+  /* As we provide position as absolute,
+  the buttons places one over the other.
+  So, we have to place them individually
+  at their correct positions. */
+  .slide-btn-1 {
+    left: 45%;
+  }
+  .slide-btn-2 {
+    left: 50%;
+  }
+  .slide-btn-3 {
+    left: 55%;
+  }
+  .slide-btn-4 {
+    left: 60%;
+  }
+  /* When we focus on the particular button,
+  the animation stops to that particular image
+  to which the button is associated. */
+  .slide-btn-1:focus~.slideshow-wrapper {
+    animation: none;
+    left: 0;
+  }
+  .slide-btn-2:focus~.slideshow-wrapper {
+    animation: none;
+    left: -100%;
+  }
+  .slide-btn-3:focus~.slideshow-wrapper {
+    animation: none;
+    left: -200%;
+  }
+  .slide-btn-4:focus~.slideshow-wrapper {
+    animation: none;
+    left: -300%;
+  }
+  /* when we focus on the button, the background color changes */
+  .slide-btn:focus {
+    background-color: #308d46;
+  }
+  /* ----- end of carousel control buttons stylings ----- */
+  

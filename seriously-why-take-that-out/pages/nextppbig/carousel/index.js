@@ -1,5 +1,6 @@
 import React from "react";
 import { GET_NEWS } from "../../api/backendless";
+import styles from '../../../styles/Home.module.css'
 
 export const Carousel = () => {
   const [holdMe, setHoldMe] = React.useState([
@@ -28,12 +29,12 @@ export const Carousel = () => {
     );
   }, []);
   return (
-    <div className="container">
-      <div className="content" style={{ color: "white" }}>
-        <div className="slideshow">
-          <div className="slideshow-wrapper">
+    <div className={styles.container}>
+      <div className={styles.content} style={{ color: "white" }}>
+        <div className={styles.slideshow}>
+          <div className={styles.slideshowWrapper}>
             {holdMe.map((item, i) => (
-              <div key={i} className="slide">
+              <div key={i} className={styles.slide}>
                 <div key={item.snippet}>
                   {" "}
                   <small>
