@@ -35,7 +35,7 @@ try{
     }
     // console.log(itemSave)
     Me("search", itemSave)
-    window.location.replace("/SearchPage");
+    window.location.replace("/nextppbig/SearchPage");
   }
 
   

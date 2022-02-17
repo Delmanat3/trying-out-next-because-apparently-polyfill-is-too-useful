@@ -7,7 +7,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { IconButton, Avatar } from "@mui/material";
 import { Jumbo } from "../jumbotron";
-import  Link  from "next/link";
+import  Link  from "./header";
 import PatternIcon from "@mui/icons-material/Pattern";
 import PersonAddAltSharpIcon from "@mui/icons-material/PersonAddAltSharp";
 import { Marque } from "../Marque/index";
@@ -31,18 +31,19 @@ const MobileNav=()=>{
                   sx={{ width: 56, height: 56 }}
                 />
 
-                <Link href="/login" underline="none"> Login <PatternIcon /></Link>
-                  <IconButton
-                    size="large"
-                    edge="start"
-                    color="primary"
-                    aria-label="menu"
-                    sx={{ mr: 2, fontSize: "14px" }}
-                  >
-                    
-                  </IconButton>
+                <Link href="/nextppbig/login" underline="none">
                 
-                <Link href="/Signup" underline="none">  Sign Up <PersonAddAltSharpIcon /> </Link>
+                  <IconButton
+                    size="large"
+                    edge="start"
+                    color="primary"
+                    aria-label="menu"
+                    sx={{ mr: 2, fontSize: "14px" }}
+                  >
+                    <PatternIcon />
+                  </IconButton>
+                  </Link>
+                <Link href="/Signup" underline="none">  
 
                   <IconButton
                     size="large"
@@ -51,11 +52,20 @@ const MobileNav=()=>{
                     aria-label="menu"
                     sx={{ mr: 2, fontSize: "14px" }}
                   >
-                  
+                  Sign Up <PersonAddAltSharpIcon /> 
                   </IconButton>
-                <Link href="/table" underline="none">     <MoneyIcon />                </Link>
-
-
+                  </Link>
+                <Link href="/table" underline="none">            
+                <IconButton
+                    size="large"
+                    edge="start"
+                    color="primary"
+                    aria-label="menu"
+                    sx={{ mr: 2, fontSize: "14px" }}
+                  >
+                    <MoneyIcon />    
+                  </IconButton>
+                  </Link>
               </Toolbar>
             </AppBar>
             <Marque />

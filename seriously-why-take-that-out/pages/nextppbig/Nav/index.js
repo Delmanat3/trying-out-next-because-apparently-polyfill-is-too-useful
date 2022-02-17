@@ -5,7 +5,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { IconButton, Avatar } from "@mui/material";
 import { Jumbo } from "../jumbotron";
-import  Link  from "next/link";
+import Link from "./header";
 import PatternIcon from "@mui/icons-material/Pattern";
 import PersonAddAltSharpIcon from "@mui/icons-material/PersonAddAltSharp";
 import { Marque } from "../Marque/index";
@@ -13,12 +13,8 @@ import MoneyIcon from "@mui/icons-material/Money";
 import { getUser } from "../../api/backendless";
 
 export default function Nav() {
- 
-
-
   const [geed, setGeed] = React.useState(true);
   React.useEffect(() => {
- 
     let myPromise = new Promise(function (myResolve, myReject) {
       const b = getUser();
 
@@ -34,12 +30,10 @@ export default function Nav() {
         console.error(error);
       }
     );
-
-
-  },[]);
+  }, []);
   return (
     <>
-      {(geed)  ? (
+      {geed ? (
         <>
           <Box sx={{ flexGrow: 1 }}>
             <AppBar
@@ -57,27 +51,27 @@ export default function Nav() {
                   Welcome back, {geed.firstName}!
                 </Typography>
 
-                {/* <Link to="/table" underline="none"><MoneyIcon /></Link> */}
-                  {/* <IconButton
+                <Link href="/Table/CoinInfo">
+                  <IconButton
                     size="large"
                     edge="start"
                     color="primary"
                     aria-label="menu"
                     sx={{ mr: 2, fontSize: "14px" }}
                   >
-                    
-                  </IconButton> */}
-                
+                    <MoneyIcon />
+                  </IconButton>
+                </Link>
               </Toolbar>
             </AppBar>
-            <coingecko-coin-price-marquee-widget  coin-ids="bitcoin,ethereum,eos,ripple,litecoin" currency="usd" background-color="#ffffff" locale="en"></coingecko-coin-price-marquee-widget>
+            <Marque />
           </Box>
           <>
             <Jumbo />
           </>
         </>
-      ):(
-         <>
+      ) : (
+        <>
           <Box sx={{ flexGrow: 1 }}>
             <AppBar
               color="transparent"
@@ -91,7 +85,7 @@ export default function Nav() {
                   sx={{ width: 56, height: 56 }}
                 />
 
-                {/* <Link href="/login" underline="none"> Login <PatternIcon /></Link> */}
+                <Link href="/Login" underline="none">
                   <IconButton
                     size="large"
                     edge="start"
@@ -99,11 +93,10 @@ export default function Nav() {
                     aria-label="menu"
                     sx={{ mr: 2, fontSize: "14px" }}
                   >
-                    
+                    <PatternIcon />{"Login"}
                   </IconButton>
-                
-                {/* <Link href="/Signup" underline="none">  Sign Up <PersonAddAltSharpIcon /> </Link> */}
-
+                </Link>
+                <Link href="/SignUp" underline="none">
                   <IconButton
                     size="large"
                     edge="start"
@@ -111,11 +104,21 @@ export default function Nav() {
                     aria-label="menu"
                     sx={{ mr: 2, fontSize: "14px" }}
                   >
-                  
+                    <PersonAddAltSharpIcon /> {"Sign Up"}
                   </IconButton>
-                {/* <Link href="/table" underline="none">     <MoneyIcon />                </Link> */}
+                </Link>
 
-
+                <Link href="/Table/CoinInfo">
+                  <IconButton
+                    size="large"
+                    edge="start"
+                    color="primary"
+                    aria-label="menu"
+                    sx={{ mr: 2, fontSize: "14px" }}
+                  >
+                    <MoneyIcon />
+                  </IconButton>
+                </Link>
               </Toolbar>
             </AppBar>
             <Marque />

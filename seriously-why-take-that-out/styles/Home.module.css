@@ -48,6 +48,20 @@
   #search{
     position: relative;
     top: 500px;
+    
+  }
+
+  #jumboBox{
+    display: none;
+  }
+  @media screen and (max-width: 700px) {
+    #careBox{
+    display: none;
+
+    }
+    #jumboBox{
+      display:contents;
+    }
   }
    #mainBox{
      min-height:100vh;

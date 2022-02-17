@@ -3,7 +3,8 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { IconButton } from "@mui/material";
-import  Link  from "next/link";
+import Link from "../../pages/nextppbig/Nav/header";
+
 import PatternIcon from "@mui/icons-material/Pattern";
 import PersonAddAltSharpIcon from "@mui/icons-material/PersonAddAltSharp";
 import MoneyIcon from "@mui/icons-material/Money";
@@ -19,7 +20,7 @@ export default function LandingNav() {
           
             >
               <Toolbar sx={{ justifyContent: "space-between" }}>
-               <Link href="/nextppbig/Nav" >this</Link> 
+               <Link href="/nextppbig/Nav" >
                   <IconButton
                     size="large"
                     edge="start"
@@ -29,10 +30,10 @@ export default function LandingNav() {
                   >
                     <MoneyIcon />
                   </IconButton> {" Try it out!"}
-                
+                  </Link> 
                 <Typography sx={{ color: "white" }}></Typography>
 
-                {/* <Link href="/login" underline="none"> */}
+                 <Link href="/Login" underline="none"> 
                   <IconButton
                     size="large"
                     edge="start"
@@ -42,8 +43,8 @@ export default function LandingNav() {
                   >
                     <PatternIcon />{"Login"}
                   </IconButton>
-                {/* </Link> */}
-                {/* <Link href="/SignUp" underline="none"> */}
+                </Link>
+                <Link href="/SignUp" underline="none">
                   <IconButton
                     size="large"
                     edge="start"
@@ -53,7 +54,7 @@ export default function LandingNav() {
                   >
                     <PersonAddAltSharpIcon />{"Sign Up"}
                   </IconButton>
-                {/* </Link> */}
+                </Link>
               </Toolbar>
             </AppBar>
           </Box>
