@@ -1,0 +1,24 @@
+{
+  "name": "jsserver",
+  "version": "1.0.0",
+  "description": "Javascript MySQL backend using Sequelize ORM",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "watch": "nodemon server.js",
+    "seed": "node seeds/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mysql2": "^2.1.0",
+    "sequelize": "^6.9.0",
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.2",
+    "express-session": "^1.17.2",
+    "multer": "^1.4.3"
+
+  }
+}
